@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>XpertBehangwerk | Professional wallpapering across the Netherlands</title>
-<meta name="description" content="Experienced wallpaper installers working throughout the Netherlands. Hotels, private homes, schools and hospitals. Paper, vlies, vinyl, textile and premium wallpaper.">
+<meta name="description" content="Experienced wallpaper installers working throughout the Netherlands. Hotels, private homes, schools and hospitals. Paper, vlies, renovlies, vinyl, textile, premium and photo wallpaper.">
 <meta name="theme-color" content="#1B2D4A">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B2D4A'/%3E%3Cpath d='M23 9L9 23' stroke='%23F1F2EE' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M9 9l14 14' stroke='%23D9B26A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -115,7 +115,7 @@ h3{font-weight:600}
 
 .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
 .swatch{display:flex;flex-direction:column;gap:.15rem}
-.swatch-img{aspect-ratio:1;border-radius:var(--r);box-shadow:inset 0 0 0 1px rgba(0,0,0,.07);margin-bottom:.55rem}
+.swatch-img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:var(--r);margin-bottom:.55rem;background:var(--plaster)}
 .swatch span{font-weight:600;color:var(--ink)}
 .swatch small{color:var(--muted);font-size:.88rem;min-height:1.2em}
 
@@ -186,8 +186,8 @@ button.tile{cursor:zoom-in}
 
 .link-btn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:left}
 .form-note .link-btn:hover,.form-note .link-btn:focus-visible{color:var(--ink)}
-.foot .link-btn{color:#C5CEDD;font-size:.95rem;justify-self:start}
-.foot .link-btn:hover{color:#fff}
+.site-footer .link-btn{color:#C5CEDD;font-size:.9rem}
+.site-footer .link-btn:hover{color:#fff}
 #privacy{margin:auto;border:0;border-radius:var(--r);padding:1.5rem 1.75rem;width:min(32rem,calc(100vw - 2rem));background:var(--card);color:var(--text)}
 #privacy::backdrop{background:rgba(14,22,38,.6)}
 #privacy h2{font-size:1.4rem;margin-bottom:.6rem}
@@ -198,11 +198,19 @@ button.tile{cursor:zoom-in}
 /* Footer */
 .frieze{height:24px;background-color:var(--ink)}
 .site-footer{background:var(--ink);color:#C5CEDD}
-.foot{display:flex;flex-wrap:wrap;gap:1rem 3rem;justify-content:space-between;align-items:flex-start;padding:2.25rem 0}
+.foot{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;justify-content:space-between;align-items:center;padding:1.5rem 0 1.25rem}
 .foot .brand{color:#fff;font-size:1.15rem}
-.foot p{margin-top:.5rem;font-size:.95rem;max-width:26em}
+.foot p{margin-top:.15rem;font-size:.92rem}
 .foot a{color:#fff}
-.foot-right{font-size:.95rem;display:grid;gap:.2rem}
+.foot-right{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;font-size:.95rem}
+.social{display:flex;gap:.5rem}
+.social a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.28);color:#fff;transition:background .15s,color .15s,border-color .15s}
+.social a:hover{background:var(--brass-l);border-color:var(--brass-l);color:var(--ink)}
+.social svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.foot-bar{display:flex;flex-wrap:wrap;gap:.3rem 1.5rem;justify-content:space-between;align-items:center;padding:.75rem 0 .9rem;border-top:1px solid rgba(255,255,255,.14);font-size:.88rem}
+.foot-legal{display:flex;flex-wrap:wrap;gap:.2rem 1.25rem;font-size:.82rem}
+.foot-legal .ph{opacity:.6}
+.foot-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.2rem 1.25rem;margin-left:auto}
 
 @media (max-width:900px){
   .facts-grid{grid-template-columns:1fr 1fr}
@@ -314,11 +322,11 @@ button.tile{cursor:zoom-in}
           <p data-i18n="mat.lead">Whatever the material, it is hung with the same precision.</p>
         </div>
         <ul class="swatches">
-          <li class="swatch"><div class="swatch-img" data-swatch="paper" aria-hidden="true"></div><span data-i18n="mat.paper">Paper</span><small></small></li>
-          <li class="swatch"><div class="swatch-img" data-swatch="vlies" aria-hidden="true"></div><span data-i18n="mat.vlies">Vlies</span><small data-i18n="mat.vlies.n">non-woven</small></li>
-          <li class="swatch"><div class="swatch-img" data-swatch="vinyl" aria-hidden="true"></div><span data-i18n="mat.vinyl">Vinyl</span><small></small></li>
-          <li class="swatch"><div class="swatch-img" data-swatch="textile" aria-hidden="true"></div><span data-i18n="mat.textile">Textile</span><small></small></li>
-          <li class="swatch"><div class="swatch-img" data-swatch="premium" aria-hidden="true"></div><span data-i18n="mat.premium">Premium</span><small></small></li>
+          <li class="swatch"><img class="swatch-img" src="images/materials/vlies.jpg" width="600" height="600" alt="" data-i18n-alt="mat.vlies.alt" loading="lazy" decoding="async"><span data-i18n="mat.vlies">Vlies</span><small data-i18n="mat.vlies.n">non-woven</small></li>
+          <li class="swatch"><img class="swatch-img" src="images/materials/renovlies.jpg" width="600" height="600" alt="" data-i18n-alt="mat.renovlies.alt" loading="lazy" decoding="async"><span data-i18n="mat.renovlies">Renovlies</span><small data-i18n="mat.renovlies.n">paintable non-woven</small></li>
+          <li class="swatch"><img class="swatch-img" src="images/materials/vinyl.jpg" width="600" height="600" alt="" data-i18n-alt="mat.vinyl.alt" loading="lazy" decoding="async"><span data-i18n="mat.vinyl">Vinyl</span><small></small></li>
+          <li class="swatch"><img class="swatch-img" src="images/materials/premium.jpg" width="600" height="600" alt="" data-i18n-alt="mat.premium.alt" loading="lazy" decoding="async"><span data-i18n="mat.premium">Premium</span><small></small></li>
+          <li class="swatch"><img class="swatch-img" src="images/materials/mural.jpg" width="600" height="600" alt="" data-i18n-alt="mat.photo.alt" loading="lazy" decoding="async"><span data-i18n="mat.photo">Photo wallpaper / mural</span><small></small></li>
         </ul>
       </div>
     </section>
@@ -439,18 +447,30 @@ button.tile{cursor:zoom-in}
 
 <footer class="site-footer">
   <div class="frieze" id="frieze" aria-hidden="true"></div>
-  <div class="wrap foot">
-    <div>
-      <a class="brand" href="#home">XpertBehangwerk</a>
-      <p data-i18n="footer.line">Professional wallpapering throughout the Netherlands.</p>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-left">
+        <a class="brand" href="#home">XpertBehangwerk</a>
+        <p data-i18n="footer.line">Professional wallpapering throughout the Netherlands.</p>
+      </div>
+      <div class="foot-right">
+        <ul class="social" data-i18n-aria="foot.social" aria-label="Social media">
+          <li><a data-social="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+          <li><a data-social="linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+        </ul>
+        <a data-email href="#"></a>
+        <a data-phone href="#" hidden></a>
+      </div>
     </div>
-    <div class="foot-right">
-      <a data-email href="#"></a>
-      <a data-phone href="#" hidden></a>
-      <span id="kvk" hidden></span>
-      <span id="btw" hidden></span>
-      <span>&copy; <span id="year"></span> XpertBehangwerk</span>
-      <button type="button" class="link-btn" data-open-privacy data-i18n="privacy.foot">Privacy</button>
+    <div class="foot-bar">
+      <div class="foot-legal">
+        <span id="kvk" hidden></span>
+        <span id="btw" hidden></span>
+      </div>
+      <div class="foot-meta">
+        <span>&copy; <span id="year"></span> XpertBehangwerk</span>
+        <button type="button" class="link-btn" data-open-privacy data-i18n="privacy.foot">Privacy</button>
+      </div>
     </div>
   </div>
 </footer>
@@ -475,14 +495,23 @@ button.tile{cursor:zoom-in}
 
   /* ---------- 1. YOUR DETAILS (edit these) ---------- */
   const CONFIG = {
-    email: 'info@xpertbehangwerk.nl',   // change to your real address
+    // Your email address, split in two on purpose: the page builds the address only when it loads,
+    // so it never appears as ready-made text in the page source, where simple scraper bots look for it.
+    emailName:   'xpertwalldecoration21',  // the part before the @
+    emailDomain: 'gmail.com',              // the part after the @
     phone: '',                          // for example '+31 6 12345678'. Leave empty to hide.
-    kvk:   '',                          // for example '12345678'. Leave empty to hide.
-    btw:   '',                          // for example 'NL123456789B01'. Leave empty to hide.
-    // The contact form sends its messages to the email address above through the free service FormSubmit.
+    kvk:   '',                          // your KvK number, for example '12345678'. While empty, the footer shows a placeholder.
+    btw:   '',                          // your BTW number, for example 'NL123456789B01'. While empty, the footer shows a placeholder.
+    // Your social media pages, shown as icons in the footer (leave one empty to hide its icon).
+    social: { instagram: 'https://www.instagram.com/xpertbehangwerk', linkedin: 'https://www.linkedin.com/in/gyor-csongor-496867301' },
+    // The contact form sends its messages to your email address through the free service FormSubmit.
+    // After you confirm the first test message, FormSubmit emails you a private "alias" (a random-looking text).
+    // Paste it here and your address is no longer used in the form's web address either. Leave empty until then.
+    formAlias: '',
     // To use another form service (for example Formspree), paste its address here. Leave empty to use FormSubmit.
     formEndpoint: ''
   };
+  const EMAIL = CONFIG.emailName + '@' + CONFIG.emailDomain;
 
   /* ---------- 2. PORTFOLIO PHOTOS (edit these) ----------
      The photos appear in this order. Each photo has:
@@ -622,7 +651,7 @@ button.tile{cursor:zoom-in}
     en: {
       'skip':'Skip to content',
       'meta.title':'XpertBehangwerk | Professional wallpapering across the Netherlands',
-      'meta.desc':'Experienced wallpaper installers working throughout the Netherlands. Hotels, private homes, schools and hospitals. Paper, vlies, vinyl, textile and premium wallpaper.',
+      'meta.desc':'Experienced wallpaper installers working throughout the Netherlands. Hotels, private homes, schools and hospitals. Paper, vlies, renovlies, vinyl, textile, premium and photo wallpaper.',
       'nav.label':'Main menu','nav.home':'Home','nav.portfolio':'Portfolio','nav.about':'About','lang.label':'Language',
       'hero.title':'Professional wallpapering across the Netherlands',
       'hero.lead':'An experienced team of wallpaper installers with all the tools for large projects and private homes. At work since 2005.',
@@ -634,7 +663,11 @@ button.tile{cursor:zoom-in}
       'f3.t':'Team and tools','f3.d':'A full team with all the equipment',
       'f4.t':'Large and small jobs','f4.d':'Mainly larger projects, homes too',
       'mat.title':'Every type of wallpaper','mat.lead':'These are the materials we usually work with. For any special requests, please reach out to us.',
-      'mat.paper':'Paper','mat.vlies':'Vlies','mat.vlies.n':'non-woven','mat.vinyl':'Vinyl','mat.textile':'Textile','mat.premium':'Premium',
+      'mat.vlies':'Vlies','mat.vlies.n':'non-woven','mat.vlies.alt':'Close-up of a green vlies wallpaper with blossoming branches',
+      'mat.renovlies':'Renovlies','mat.renovlies.n':'paintable non-woven','mat.renovlies.alt':'Close-up of white renovlies being hung on a wall',
+      'mat.vinyl':'Vinyl','mat.vinyl.alt':'Close-up of a wallpaper with a woven texture',
+      'mat.premium':'Premium','mat.premium.alt':'Close-up of a premium wallpaper with a raised thread texture',
+      'mat.photo':'Photo wallpaper / mural','mat.photo.alt':'A room with a large photo wallpaper of a tree-lined country road covering the wall',
       'sec.title':'Where we work','sec.lead':'We mainly handle larger projects, but smaller residential jobs get the same care.',
       'sec.hotels':'Hotels','sec.homes':'Private homes','sec.schools':'Schools','sec.hospitals':'Hospitals',
       'cta.title':'Planning a project?','cta.lead':'Send us a message about the job and its location.','cta.email':'Email us','cta.about':'Send a message',
@@ -642,7 +675,7 @@ button.tile{cursor:zoom-in}
       'lb.label':'Photo viewer','lb.close':'Close','lb.prev':'Previous photo','lb.next':'Next photo',
       'about.title':'About',
       'about.p1':'I am Csongor, founder of XpertBehangwerk.',
-      'about.p2':'We have worked as professional wallpaper installers since 2005. We have experience with all types of wallpaper, including paper, vlies, vinyl, textile and premium materials.',
+      'about.p2':'We have been working as professional wallpaper installers since 2005. We have experience with all types of wallpaper, including paper, vlies, renovlies, vinyl, textile, premium materials and photo wallpaper.',
       'about.p3':'We have worked throughout the Netherlands on hotels, private homes, schools and hospitals. Our work is precise, clean and reliable. We always aim for a high-quality, long-lasting and visually perfect result that matches the client’s vision.',
       'about.p4':'We mainly handle larger projects, but we also take smaller residential jobs with the same care.',
       'about.p5':'We speak English only, but we communicate clearly and effectively. We are open to new clients, collaborations and professional opportunities throughout the Netherlands.',
@@ -665,12 +698,12 @@ button.tile{cursor:zoom-in}
       'privacy.link':'Privacy statement','privacy.foot':'Privacy','privacy.title':'Privacy',
       'privacy.p':'If you use the contact form, we receive your name, email address, phone number (optional), job location and message. We only use them to reply to you. The form is delivered by FormSubmit, a third-party service that passes your message on to our email and may keep a copy for a short time. This website has no tracking or ads and only remembers your language choice on your device.',
       'privacy.contact':'To see or delete your details, email us at',
-      'footer.line':'Professional wallpapering throughout the Netherlands.','kvk':'KvK','btw':'BTW'
+      'footer.line':'Professional wallpapering throughout the Netherlands.','foot.social':'Social media','kvk':'KvK','btw':'BTW','kvk.ph':'[to be added]'
     },
     nl: {
       'skip':'Naar de inhoud',
       'meta.title':'XpertBehangwerk | Professioneel behangwerk door heel Nederland',
-      'meta.desc':'Ervaren behangers actief door heel Nederland. Hotels, particuliere woningen, scholen en ziekenhuizen. Papier, vlies, vinyl, textiel en premium behang.',
+      'meta.desc':'Ervaren behangers actief door heel Nederland. Hotels, particuliere woningen, scholen en ziekenhuizen. Papier, vlies, renovlies, vinyl, textiel, premium en fotobehang.',
       'nav.label':'Hoofdmenu','nav.home':'Home','nav.portfolio':'Portfolio','nav.about':'Over ons','lang.label':'Taal',
       'hero.title':'Professioneel behangwerk door heel Nederland',
       'hero.lead':'Een ervaren team behangers met al het gereedschap voor grote projecten en particuliere woningen. Actief sinds 2005.',
@@ -682,7 +715,11 @@ button.tile{cursor:zoom-in}
       'f3.t':'Team en gereedschap','f3.d':'Een compleet team met alle benodigde apparatuur',
       'f4.t':'Groot en klein','f4.d':'Vooral grotere projecten, maar ook woningen',
       'mat.title':'Alle soorten behang','mat.lead':'Dit zijn de materialen waarmee wij meestal werken. Voor speciale wensen: neem gerust contact met ons op.',
-      'mat.paper':'Papier','mat.vlies':'Vlies','mat.vlies.n':'','mat.vinyl':'Vinyl','mat.textile':'Textiel','mat.premium':'Premium',
+      'mat.vlies':'Vlies','mat.vlies.n':'','mat.vlies.alt':'Detail van een groen vliesbehang met bloeiende takken',
+      'mat.renovlies':'Renovlies','mat.renovlies.n':'','mat.renovlies.alt':'Detail van wit renovlies dat op een wand wordt gehangen',
+      'mat.vinyl':'Vinyl','mat.vinyl.alt':'Detail van behang met een geweven structuur',
+      'mat.premium':'Premium','mat.premium.alt':'Detail van een premium behang met een verheven draadstructuur',
+      'mat.photo':'Fotobehang','mat.photo.alt':'Ruimte met een groot fotobehang van een met bomen omzoomde landweg over de wand',
       'sec.title':'Waar wij werken','sec.lead':'Wij nemen vooral grotere projecten aan, maar ook kleinere woningklussen pakken we met dezelfde zorg aan.',
       'sec.hotels':'Hotels','sec.homes':'Particuliere woningen','sec.schools':'Scholen','sec.hospitals':'Ziekenhuizen',
       'cta.title':'Een project in de planning?','cta.lead':'Stuur ons een bericht over de klus en de locatie.','cta.email':'Mail ons','cta.about':'Stuur een bericht',
@@ -690,7 +727,7 @@ button.tile{cursor:zoom-in}
       'lb.label':'Fotoviewer','lb.close':'Sluiten','lb.prev':'Vorige foto','lb.next':'Volgende foto',
       'about.title':'Over ons',
       'about.p1':'Ik ben Csongor, oprichter van XpertBehangwerk.',
-      'about.p2':'Wij werken sinds 2005 als professionele behangers. Wij hebben ervaring met alle soorten behang, waaronder papier, vlies, vinyl, textiel en premium materialen.',
+      'about.p2':'Wij werken sinds 2005 als professionele behangers. Wij hebben ervaring met alle soorten behang, waaronder papier, vlies, renovlies, vinyl, textiel, premium materialen en fotobehang.',
       'about.p3':'Wij hebben door heel Nederland gewerkt aan hotels, particuliere woningen, scholen en ziekenhuizen. Ons werk is nauwkeurig, schoon en betrouwbaar. Wij streven altijd naar een hoogwaardig, duurzaam en visueel perfect resultaat dat aansluit bij de visie van de klant.',
       'about.p4':'Wij nemen vooral grotere projecten aan, maar ook kleinere woningklussen pakken we met dezelfde zorg op.',
       'about.p5':'Wij spreken alleen Engels, maar we communiceren duidelijk en effectief. Wij staan open voor nieuwe klanten, samenwerkingen en professionele kansen in heel Nederland.',
@@ -713,7 +750,7 @@ button.tile{cursor:zoom-in}
       'privacy.link':'Privacyverklaring','privacy.foot':'Privacy','privacy.title':'Privacy',
       'privacy.p':'Als u het contactformulier gebruikt, ontvangen wij uw naam, e-mailadres, telefoonnummer (optioneel), de locatie van de klus en uw bericht. Wij gebruiken deze gegevens alleen om u te antwoorden. Het formulier wordt verzonden via FormSubmit, een externe dienst die uw bericht doorstuurt naar onze e-mail en er korte tijd een kopie van kan bewaren. Deze website gebruikt geen tracking of advertenties en onthoudt alleen uw taalkeuze op uw apparaat.',
       'privacy.contact':'Wilt u uw gegevens inzien of laten verwijderen? Stuur ons een e-mail via',
-      'footer.line':'Professioneel behangwerk door heel Nederland.','kvk':'KvK','btw':'BTW'
+      'footer.line':'Professioneel behangwerk door heel Nederland.','foot.social':'Social media','kvk':'KvK','btw':'BTW','kvk.ph':'[volgt]'
     }
   };
 
@@ -732,13 +769,6 @@ button.tile{cursor:zoom-in}
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${p.w}" height="${p.h}" viewBox="0 0 ${p.w} ${p.h}">${p.svg}</svg>`;
     return `background-color:${a};background-image:url('data:image/svg+xml,${encodeURIComponent(svg)}');background-size:${p.w*scale}px ${p.h*scale}px`;
   }
-  const SWATCH = {
-    paper:  ['stripe','#F4F4F1','#DCE1DC','#BFC8C1',1.2],
-    vlies:  ['leaf','#DDE6E0','#B7C9BE','#9DB3A6',1],
-    vinyl:  ['diamond','#2C4A6B','#5F86AD','#A9C1DA',1.2],
-    textile:['grass','#CDBFA9','#8F7E63','#8F7E63',1.6],
-    premium:['arch','#1F2430','#B48A3E','#6D5528',1.2]
-  };
 
   /* ---------- Helpers ---------- */
   const $  = (s, r=document) => r.querySelector(s);
@@ -749,7 +779,6 @@ button.tile{cursor:zoom-in}
 
   /* ---------- Static patterns ---------- */
   $('#frieze').setAttribute('style', pattern('lattice','#1B2D4A','#7F9CC0','#D9B26A',0.3));
-  $$('[data-swatch]').forEach(el => el.setAttribute('style', pattern(...SWATCH[el.dataset.swatch])));
 
   /* ---------- Portfolio gallery: justified rows with varying heights ---------- */
   const gal = $('#gallery');
@@ -849,7 +878,7 @@ button.tile{cursor:zoom-in}
     if(withMail){
       statusEl.append(' ');
       const a = document.createElement('a');
-      a.href = 'mailto:' + CONFIG.email; a.textContent = CONFIG.email;
+      a.href = 'mailto:' + EMAIL; a.textContent = EMAIL;
       statusEl.append(a, '.');
     }
     statusEl.hidden = false;
@@ -860,7 +889,7 @@ button.tile{cursor:zoom-in}
     const v = n => form.elements[n].value.trim();
     if(form.elements['_honey'].value){ showStatus('ok', t('form.ok')); form.reset(); return; }   // bots fill the hidden field
     sendBtn.disabled = true; sendBtn.textContent = t('form.sending'); statusEl.hidden = true;
-    const endpoint = CONFIG.formEndpoint || ('https://formsubmit.co/ajax/' + CONFIG.email);
+    const endpoint = CONFIG.formEndpoint || ('https://formsubmit.co/ajax/' + (CONFIG.formAlias || EMAIL));
     const payload = {
       name: v('name'), email: v('email'), ...(v('phone') ? { phone: v('phone') } : {}), subject: v('subject'), location: v('location'), message: v('message'),
       site_language: lang === 'nl' ? 'Dutch' : 'English',
@@ -893,15 +922,21 @@ button.tile{cursor:zoom-in}
 
   /* ---------- Contact details ---------- */
   function applyContact(){
-    const mail = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(t('mail.subject'));
-    $$('[data-email]').forEach(a => { a.href = 'mailto:' + CONFIG.email; a.textContent = CONFIG.email; });
+    $$('[data-social]').forEach(a => {
+      const url = CONFIG.social[a.dataset.social];
+      a.closest('li').hidden = !url;
+      if(url) a.href = url;
+    });
+    $('.social').hidden = !Object.values(CONFIG.social).some(Boolean);
+    const mail = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(t('mail.subject'));
+    $$('[data-email]').forEach(a => { a.href = 'mailto:' + EMAIL; a.textContent = EMAIL; });
     $$('[data-mailto]').forEach(a => { a.href = mail; });
     const hasPhone = !!CONFIG.phone;
     $$('[data-phone]').forEach(a => { a.hidden = !hasPhone; a.href = 'tel:' + CONFIG.phone.replace(/[^+\d]/g,''); a.textContent = CONFIG.phone; });
     $('#phone-row').hidden = !hasPhone;
     const kvk = $('#kvk'), btw = $('#btw');
-    kvk.hidden = !CONFIG.kvk; kvk.textContent = CONFIG.kvk ? t('kvk') + ': ' + CONFIG.kvk : '';
-    btw.hidden = !CONFIG.btw; btw.textContent = CONFIG.btw ? t('btw') + ': ' + CONFIG.btw : '';
+    kvk.hidden = false; kvk.textContent = t('kvk') + ': ' + (CONFIG.kvk || t('kvk.ph')); kvk.classList.toggle('ph', !CONFIG.kvk);
+    btw.hidden = false; btw.textContent = t('btw') + ': ' + (CONFIG.btw || t('kvk.ph')); btw.classList.toggle('ph', !CONFIG.btw);
   }
 
   /* ---------- Language ---------- */

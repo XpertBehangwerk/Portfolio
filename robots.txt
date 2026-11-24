@@ -1,0 +1,31 @@
+# robots.txt for XpertBehangwerk
+# Last checked against the crawler operators' documentation: November 2026.
+#
+# Normal search engines (Google, Bing, ...) and AI search/answer bots may visit.
+# Crawlers that collect content to TRAIN AI models are asked to stay away.
+# This is a request that the companies say they follow, not a lock.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Everyone else, including search engines and AI search bots
+User-agent: *
+Allow: /
